@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="style2.css">
+
+    <title>Lab 5 part 1</title>
+</head>
+
+
+<body>
+    <center>
+        <h1>Task 1</h1>
+        Javascript Calculator
+        <form>
+            <b>
+            <label>a:</label>
+            <input type="text" id="a"><br><br>
+            <label>b:</label>
+            <input type="text" id="b"><br><br>
+        </b>
+
+        </form>
+        <b> Sum :
+        <p id="SUM"> </p>
+        Sub :
+        <p id="sub"></p>
+        mul :
+        <p id="mul"></p>
+        div :
+        <p id="div"></p></b>
+        <button onclick=" calculate()"> Click here for result </button><br><br>
+        <h1>Task 2</h1>
+        <button onclick="myalert()">Click here for alert </button><br><br>
+
+        <h6>Task 3 is in index2.html file
+        </h6>
+    </center>
+
+
+
+
+
+
+
+</body>
+<script Language="Javascript">
+    function calculate() {
+
+        var a = parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        document.getElementById('SUM').innerHTML = a + b;
+        document.getElementById('sub').innerHTML = a - b
+        document.getElementById('mul').innerHTML = a * b
+        document.getElementById('div').innerHTML = a / b
+
+
+
+    }
+
+    function myalert() {
+        alert("JS alert");
+    }
+
+    function minmax() {
+
+        var a = parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var c = parseInt(document.getElementById('c').value);
+        var d = parseInt(document.getElementById('d').value);
+        var e = parseInt(document.getElementById('e').value);
+        document.getElementById('max').innerHTML = Math.max(a, b, c, d, e);
+        document.getElementById('min').innerHTML = Math.min(a, b, c, d, e);
+        document.getElementById('random').innerHTML = Math.random(a, b, c, d, e)
+
+
+
+
+    }
+</script>
+
+</html>
